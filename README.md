@@ -7,3 +7,5 @@
 - .gitignore -> Github'a yüklemez. 
 - npm run dev
 - Developer Console (f12)
+- Component tree structure (SPA)
+
