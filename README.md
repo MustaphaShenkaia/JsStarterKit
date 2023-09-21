@@ -9,3 +9,6 @@
 - Developer Console (f12)
 - Component tree structure (SPA)
 
+JS dil yeteneği olarak C#, Python, Java kadar güçlü değil ama
+backend, mobile vb. bir çok alanda yaygın olarak kullanılır.  
+
