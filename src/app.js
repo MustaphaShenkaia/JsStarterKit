@@ -77,3 +77,5 @@ console.log(sayi1) // 20
 // 101  Sayi=10
 // 102  Sayi=20
 // Değer atanır ve iş biter. Sayılar değer tiptir. 
+
+// 1.24
