@@ -34,3 +34,46 @@ let sayHello2 = function () {
     console.log("Hello World 2")
 }
 sayHello2();
+
+//-----------------------------------------------------------
+
+function addToCart3(productName, quantity, unitPrice) {
+    // Çoklu Parametreler ile işlem best practise değildir. 
+    // Parametrelerde karışıklık olabilir yada unutulablir. 
+    // Bu sebeple objects kullanılır. 
+}
+addToCart3("Elma",5,10)
+addToCart3("Armut", 2, 20)
+addToCart3("Limon",3,15)
+
+//-----------------------------------------------------------
+
+let product1 = {productName:"Elma", unitPrice:10, quantity:5}
+
+function addToCart03(p) {
+    console.log("Ürün : " + p.productName)
+    console.log("Adet : " + p.quantity)
+    console.log("Fiyat : " + p.unitPrice)
+}
+addToCart03(product1)
+
+//-----------------------------------------------------------
+
+let product2 = {productName:"Elma", unitPrice:10, quantity:5}
+let product3 = {productName:"Elma", unitPrice:10, quantity:5}
+product2 = product3 // Aynı referans adresine sahip olurlar. 
+product2.productName = "KARPUZ" // product2 ve product3 her ikisindede karpuz olur. 
+console.log(product2.productName)
+console.log(product3.productName)
+
+let sayi1 = 10
+let sayi2 = 20
+sayi1 = sayi2
+sayi2 = 100
+console.log(sayi1) // 20 
+// Value Type 
+
+//      Stack    Heap
+// 101  Sayi=10
+// 102  Sayi=20
+// Değer atanır ve iş biter. Sayılar değer tiptir. 

@@ -38,6 +38,8 @@ function addToCart3(product) {
 
 addToCart3(product1)
 
+
+
 let product2 = {productName:"Elma", unitPrice:10, quantity:5}
 let product3 = {productName:"Elma", unitPrice:10, quantity:5}
 product2 = product3

@@ -18,6 +18,8 @@ fronted, backend, mobile vb. bir çok alanda yaygın olarak kullanılır.
 - Vanilla JS yerine modern dillere yakın geliştirilmiş standardizasyon diller kullanılır. (ECMA Script)
 - Bazı JS kullanımları JS diline transpailer (çeviri) yapar. (babel, typescript etc.) 
 Hiç bir teknolojinin fanatiği olmamalıdır. 
+Programlama programlamadır. Tüm dillerin mantığı aynıdır, sadece nüans farkları vardır.
+Birine hakimsen diğerine geçmen çok fazla bir vakit almaz.  
 
 ### VSCode Extensions
 - Auto Rename Tag
