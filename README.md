@@ -12,6 +12,7 @@
 - JS dil yeteneği olarak C#, Python, Java kadar güçlü değil ama
 fronted, backend, mobile vb. bir çok alanda yaygın olarak kullanılır.  
 - JS website dinamic olmasını sağlar. JS type safe (tip güvenli) bir dil değildir. 
+- JS kafası rahat dildir. Diğer diller gibi kuralları sıkı değildir. 
 - Database -> Backend - Fronted -> (req, res) <- User
 - DOM maniplasyonu; veri değişimine (dynamic) göre yeşil ok görünsün yada kırmızı ok görünsün şeklinde sayfa render (son görünüm) edilir. (w3schools)  
 - Vanilla JS yerine modern dillere yakın geliştirilmiş standardizasyon diller kullanılır. (ECMA Script)
