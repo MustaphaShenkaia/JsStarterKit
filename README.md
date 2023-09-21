@@ -8,7 +8,32 @@
 - npm run dev
 - Developer Console (f12)
 - Component tree structure (SPA)
+- index.html -> app.js
 
+### About
 JS dil yeteneği olarak C#, Python, Java kadar güçlü değil ama
-backend, mobile vb. bir çok alanda yaygın olarak kullanılır.  
+fronted, backend, mobile vb. bir çok alanda yaygın olarak kullanılır.  
+JS website dinamic olmasını sağlar. 
+Database -> Backend - Fronted -> (req, res) <- User
+DOM maniplasyonu; veri değişimine (dynamic) göre yeşil ok görünsün yada kırmızı ok görünsün şeklinde sayfa render (son görünüm) edilir. (w3schools)  
+Vanilla JS yerine modern dillere yakın geliştirilmiş standardizasyon diller kullanılır. (ECMA Script)
+Bazı JS kullanımları JS diline transpailer (çeviri) yapar. (babel, typescript etc.) 
+JS type safe (tip güvenli) bir dil değildir. 
+Hiç bir teknolojinin fanatiği olmamalıdır. 
+
+### VSCode Extensions
+- Auto Rename Tag
+- Bracket Pair Colorizer 2
+- Dracula Official Theme
+- ES7 React/Redux/GraphQL/React-Native snippets
+- EditorConfig for VS Code (angular, react etc. şablonu yerine kendi boiler plate'ini oluştur)
+- Live Server
+- Material Icon Theme
+- ESLint
+
+### Github
+- git clone ... 
+- Remote -> Add Remote -> Add remote from Github ... (kendi repo)
+- Pull / Push
+
 
