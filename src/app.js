@@ -71,7 +71,7 @@ let sayi2 = 20
 sayi1 = sayi2
 sayi2 = 100
 console.log(sayi1) // 20 
-// Value Type 
+// Value Type (Değer tip)
 
 //      Stack    Heap
 // 101  Sayi=10
