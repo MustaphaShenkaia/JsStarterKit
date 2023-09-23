@@ -20,16 +20,47 @@ export default class UserService {
     add(user) {
         // console.log("Kullanıcı eklendi: " + user); // user object
         // this.users.push(user)
+        switch (user.type) {
+            case "customer":
+                if (!this.checkCustomerValidityForErrors(user)) {
+                    this.customers.push(user)
+                }                
+                break;
+            case "employee":
+                this.employees.push(user)
+                break;
+            default:
+                this.errors.push(new DataError("Wrong user type",user))
+                break;
+        }
     }
     // Class içindeki methodlarda function adı kullanılmaz. 
     list() {
         // console.log("Kullanıcılar listelendi..");
         // return this.users
     }
+    listCustomers() {
+        return this.customers
+    }
     getById(id) {
         // console.log("Kullanıcı çağrıldı..");
         // return this.users.find(u => u.id === id)
     }
+    getCustomerById(id) {
+        return this.users.find(u => u.id === id)
+    }
+    getCustomersSorted() {
+        return this.customers.sort((customer1, customer2) => {
+            if (customer1.firstName>customer2.firstName) {
+                return 1; 
+            } else if (customer1.firstName===customer2.firstName) {
+                return 0; 
+            } else {
+                return -1; 
+            }
+        })
+    }
+    // Employee ve User service olarak ayrı yerlerde olmalılardır. 
 
 
     //=========================================
@@ -67,6 +98,11 @@ export default class UserService {
                 this.errors.push(new DataError(`Valdation problem. ${field} is required`, user))
             }
         }
+
+        if (Number.isNaN(Number.parseInt(user.age))) {
+            this.errors.push(new DataError(`Valdation problem. ${user.age} is not a number`, user))
+        }
+        return hasErrors
     }
 
     checkEmployeeValidityForErrors(user) {  
