@@ -1,3 +1,4 @@
+// Typescript -> export const users : User[] 
 
 //id, firstName, lastName, city,age, creditCardNumber
 export const users = [
@@ -9,16 +10,7 @@ export const users = [
         age: 36,
         creditCardNumber: "123456",
         type: "customer"
-    },
-    {
-        id: 6,
-        firstName: "Beytullah",
-        lastName: "Zor",
-        city:"Ankara",
-        age: 36,
-        creditCardNumber: "123456",
-        type: "customer"
-    },
+    },   
     {
         id: 2,
         firstName: "Mustafa",
@@ -54,7 +46,14 @@ export const users = [
         age: 20,
         salary: 15000,
         type: "employee"
+    },
+    {
+        id: 6,
+        firstName: "Beytullah",
+        lastName: "Zor",
+        city:"Ankara",
+        age: 36,
+        creditCardNumber: "123456",
+        type: "customer"
     }
 ]
-
-//23.05 Dersteyiz

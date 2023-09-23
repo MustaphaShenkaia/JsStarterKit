@@ -19,8 +19,8 @@ fronted, backend, mobile vb. bir çok alanda yaygın olarak kullanılır.
 - Bazı JS kullanımları JS diline transpailer (çeviri) yapar. (babel, typescript etc.) 
 - JS OOP işini function ile yürütür. ECMA Script ile dahada iyileştirilmiştir. 
 - Do Not Repeat Yourself (DRY) kendini tekrarlamayan kod ve SOLID yazılım geliştirme kurallarını destekleyen metodolojide ilerlemek gerekir. 
-Hiç bir teknolojinin fanatiği olunmamalıdır. Programlama programlamadır.  
-Tüm dillerin mantığı aynıdır, sadece nüans farkları vardır.
+Hiç bir teknolojinin fanatiği olunmamalıdır. Teknolojiler değişkendir. Programlama programlamadır.  
+Tüm dillerin mantığı aynıdır, sadece nüans, syntax ve dil özellik farkları vardır.
 Birine hakimsen diğerine geçmen çok fazla bir vakit almaz. 
 SPA component'lerden oluşur.  
 

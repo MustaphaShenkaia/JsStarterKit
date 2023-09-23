@@ -1,110 +1,94 @@
-import { users } from "../data/users.js"
-import DataError from "../models/dataError.js"
+import {users} from '../data/users.js'; // Array
+import DataError from '../models/dataError.js';
 
 export default class UserService {
+
     constructor(loggerService) {
+        this.users = []
         this.employees = []
         this.customers = []
         this.errors = []
         this.loggerService = loggerService
+        // this.users = getUsersFromDb() 
+        // normalde constructor içinde kullanılmaz. 
     }
 
-    load() {
+    //====================================================
+
+    // METHODS
+
+    add(user) {
+        // console.log("Kullanıcı eklendi: " + user); // user object
+        // this.users.push(user)
+    }
+    // Class içindeki methodlarda function adı kullanılmaz. 
+    list() {
+        // console.log("Kullanıcılar listelendi..");
+        // return this.users
+    }
+    getById(id) {
+        // console.log("Kullanıcı çağrıldı..");
+        // return this.users.find(u => u.id === id)
+    }
+
+
+    //=========================================
+
+
+    load(){
         for (const user of users) {
+            // console.log(user);
             switch (user.type) {
                 case "customer":
                     if (!this.checkCustomerValidityForErrors(user)) {
                         this.customers.push(user)
-                    }
+                    }                    
                     break;
                 case "employee":
                     if (!this.checkEmployeeValidityForErrors(user)) {
                         this.employees.push(user)
-                    }
+                    }                         
                     break;
                 default:
-                    this.errors.push(new DataError("Wrong user type", user))
+                    this.errors.push(new DataError("Wrong user type",user))
                     break;
             }
         }
     }
 
-    //formik-yup
-    checkCustomerValidityForErrors(user) {
-        let requiredFields = "id firstName lastName age city".split(" ")
+    // Formik-Yup library
+    checkCustomerValidityForErrors(user) {  
+        let requiredFields = "id firstName lastName city age".split(" ") // array döner  
+        // console.log(user[requiredFields[1]]);      
         let hasErrors = false
         for (const field of requiredFields) {
-            if (!user[field]) {
+            if (!user[field]) { // alanlar eksik gelirse
                 hasErrors = true
-                this.errors.push(
-                    new DataError(`Validation problem. ${field} is required`, user))
+                this.errors.push(new DataError(`Valdation problem. ${field} is required`, user))
             }
         }
-
-        if (Number.isNaN(Number.parseInt(+user.age))) {
-            hasErrors = true
-            this.errors.push(new DataError(`Validation problem. ${user.age} is not a number`, user))
-        }
-
-        return hasErrors
     }
 
-    checkEmployeeValidityForErrors(user) {
-        let requiredFields = "id firstName lastName age city salary".split(" ")
+    checkEmployeeValidityForErrors(user) {  
+        let requiredFields = "id firstName lastName city age salary".split(" ") // array döner  
+        // console.log(user[requiredFields[1]]);      
         let hasErrors = false
         for (const field of requiredFields) {
-            if (!user[field]) {
+            if (!user[field]) { // alanlar eksik gelirse
                 hasErrors = true
-                this.errors.push(
-                    new DataError(`Validation problem. ${field} is required`, user))
+                this.errors.push(new DataError(`Valdation problem. ${field} is required`, user))
             }
         }
-
-        if (Number.isNaN(Number.parseInt(user.age))) {
-            hasErrors = true
-            this.errors.push(new DataError(`Validation problem. ${user.age} is not a number`, user))
-        }
-        return hasErrors
     }
-
-    add(user) {
-        switch (user.type) {
-            case "customer":
-                if (!this.checkCustomerValidityForErrors(user)) {
-                    this.customers.push(user)
-                }
-                break;
-            case "employee":
-                if (!this.checkEmployeeValidityForErrors(user)) {
-                    this.employees.push(user)
-                }
-                break;
-            default:
-                this.errors.push(
-                    new DataError("This user can not be added. Wrong user type", user))
-                break;
-        }
-        this.loggerService.log(user)
-    }
-
-    listCustomers() {
-        return this.customers
-    }
-
-    getCustomerById(id) {
-        return this.customers.find(u=>u.id ===id)
-    }
-
-    getCustomersSorted(){
-        return this.customers.sort((customer1,customer2)=>{
-            if(customer1.firstName>customer2.firstName){
-                return 1;
-            }else if(customer1.firstName===customer2.firstName){
-                return 0;
-            }else{
-                return -1
-            }
-        })
-    }
-
 }
+// export -> Dışarıdan import edilebilir. 
+// default -> JS dosya bazlı (file base) olduğundan dışarıdan import edildiğinde 
+// direkt bu class çalışır. 
+// Aksi takdirde import {UserService} şeklinde çağrılır. 
+
+
+
+
+
+
+
