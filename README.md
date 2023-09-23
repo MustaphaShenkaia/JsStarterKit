@@ -54,7 +54,7 @@ Olursa değer ve referans tutucularla class method tutucu aynı yerde olur.
 Bu durumda instalances (new) durumunda hepsi gelmiş olur. 
 
 - index.html -> app.js -> components
-- userComponent (component)
-    -> userModel -> (super) -> customerModel, employeeModel // logger
-    -> userService -> Data (API) 
+- Component (model-service) -> Service -> Data
+- userModel -> (super) -> customerModel, employeeModel // logger
+- userService -> Data (API) 
 
