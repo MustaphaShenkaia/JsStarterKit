@@ -53,8 +53,8 @@ Mesela kullanıcı ile ilgili methodlar ile kullanıcı bilgileri aynı class i�
 Olursa değer ve referans tutucularla class method tutucu aynı yerde olur. 
 Bu durumda instalances (new) durumunda hepsi gelmiş olur. 
 
-index.html -> app.js -> components
-userComponent (component)
+- index.html -> app.js -> components
+- userComponent (component)
     -> userModel -> (super) -> customerModel, employeeModel // logger
     -> userService -> Data (API) 
 
